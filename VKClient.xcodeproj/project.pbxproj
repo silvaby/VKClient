@@ -14,6 +14,7 @@
 		422C74652549B9620068C2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422C74642549B9620068C2A2 /* Assets.xcassets */; };
 		422C74682549B9620068C2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422C74662549B9620068C2A2 /* LaunchScreen.storyboard */; };
 		422C74882549D5260068C2A2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C74872549D5260068C2A2 /* CustomTableViewCell.swift */; };
+		422C748C2549D69C0068C2A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C748B2549D69C0068C2A2 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		422C74672549B9620068C2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		422C74692549B9620068C2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422C74872549D5260068C2A2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		422C748B2549D69C0068C2A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				422C745F2549B9600068C2A2 /* TableViewController.swift */,
+				422C748B2549D69C0068C2A2 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				422C74602549B9600068C2A2 /* TableViewController.swift in Sources */,
 				422C745C2549B9600068C2A2 /* AppDelegate.swift in Sources */,
 				422C74882549D5260068C2A2 /* CustomTableViewCell.swift in Sources */,
+				422C748C2549D69C0068C2A2 /* SettingsViewController.swift in Sources */,
 				422C745E2549B9600068C2A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Posts-->
         <scene sceneID="QKw-b6-BEY">
             <objects>
                 <viewController id="yMC-By-nyn" customClass="TableViewController" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,13 +36,13 @@
                         <viewLayoutGuide key="safeArea" id="HId-q3-NaV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ST7-Dh-4sV"/>
+                    <navigationItem key="navigationItem" title="Posts" id="ST7-Dh-4sV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryc-2k-6Gx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1928.985507246377" y="1415.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="bGs-Ah-QBU">
             <objects>
                 <viewController id="6G9-F2-DZo" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                         <viewLayoutGuide key="safeArea" id="nKi-Op-zzN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hk1-WP-xlJ"/>
+                    <navigationItem key="navigationItem" title="Settings" id="hk1-WP-xlJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5N-AJ-GmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
