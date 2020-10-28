@@ -45,7 +45,7 @@
         <!--Settings-->
         <scene sceneID="bGs-Ah-QBU">
             <objects>
-                <viewController id="6G9-F2-DZo" sceneMemberID="viewController">
+                <viewController id="6G9-F2-DZo" customClass="SettingsViewController" customModule="VKClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uIz-FD-eUc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
