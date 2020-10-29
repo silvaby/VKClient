@@ -8,6 +8,6 @@ target 'VKClient' do
   # Pods for VKClient
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON', '~> 4.0'
-  pod 'VK-ios-sdk'
+  pod 'SDWebImage', '~> 5.0'
   
 end
