@@ -6,7 +6,7 @@ target 'VKClient' do
   use_frameworks!
 
   # Pods for VKClient
-  pod 'Alamofire', '~> 5.2'
+  pod 'Alamofire', '~> 5.0'
   pod 'SDWebImage', '~> 5.0'
   
 end
