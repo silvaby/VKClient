@@ -9,9 +9,9 @@
 4.    Контроллер со списком постов пользователя должен иметь динамическую подгрузку при скроле. Посты должны быть отсортированы по дате.
 5.    Все списковые контролы должны поддерживать обновление через `refresh control` или его аналоги.
 6.    UI должен соответствовать guideline-ам Apple и сделан с помощью `autolayout`.
-7.    Для работы с сервером использовать библиотеку (Alamofire)[https://github.com/Alamofire/Alamofire#installation].
+7.    Для работы с сервером использовать библиотеку [Alamofire](https://github.com/Alamofire/Alamofire#installation).
 8.    Swift 4.0+
 
 ## Requirements
 
-- iOS 11.0 or later.
+- iOS 12.0 or later.
