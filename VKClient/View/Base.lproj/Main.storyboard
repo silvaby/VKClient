@@ -17,26 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pI3-VY-xFQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pI3-VY-xFQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Bz8-12-x9T" customClass="CustomTableViewCell" customModule="VKClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="ttO-mK-VRS" detailTextLabel="XIg-rQ-joe" style="IBUITableViewCellStyleSubtitle" id="Bz8-12-x9T" customClass="CustomTableViewCell" customModule="VKClient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bz8-12-x9T" id="K8X-r8-4xd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="FullName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ttO-mK-VRS">
+                                                    <rect key="frame" x="20" y="10" width="71.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="WallText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XIg-rQ-joe">
+                                                    <rect key="frame" x="20" y="31.5" width="47.5" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fullName" destination="ttO-mK-VRS" id="VQi-JI-eq5"/>
+                                            <outlet property="wallText" destination="XIg-rQ-joe" id="xmU-TG-ZcR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HId-q3-NaV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pI3-VY-xFQ" firstAttribute="leading" secondItem="HId-q3-NaV" secondAttribute="leading" id="3He-gw-pOY"/>
+                            <constraint firstItem="pI3-VY-xFQ" firstAttribute="top" secondItem="HId-q3-NaV" secondAttribute="top" id="FhF-ID-uLp"/>
+                            <constraint firstItem="pI3-VY-xFQ" firstAttribute="centerX" secondItem="HId-q3-NaV" secondAttribute="centerX" id="Ige-g4-zbw"/>
+                            <constraint firstItem="pI3-VY-xFQ" firstAttribute="centerY" secondItem="HId-q3-NaV" secondAttribute="centerY" id="aMS-Tt-xWd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Posts" id="ST7-Dh-4sV"/>
+                    <connections>
+                        <outlet property="tableView" destination="pI3-VY-xFQ" id="Xom-gm-INq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryc-2k-6Gx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +152,7 @@
                     </view>
                     <connections>
                         <outlet property="webView" destination="BLd-sA-EcA" id="gNA-av-rV7"/>
-                        <segue destination="3pf-YS-Nvw" kind="presentation" identifier="Login Segue" modalPresentationStyle="fullScreen" id="ayx-6E-tam"/>
+                        <segue destination="3pf-YS-Nvw" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="ayx-6E-tam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUU-vw-pvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

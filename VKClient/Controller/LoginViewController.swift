@@ -30,21 +30,16 @@ class LoginViewController: UIViewController {
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.124"),
         ]
-
-        print(urlComponents)
         let request = URLRequest(url: urlComponents.url!)
-
         webView.load(request)
     }
 }
 
 extension LoginViewController: WKNavigationDelegate {
-    func webView(_: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-        print("webView now is here")
-        print(navigationResponse.response.url!)
-
-        guard let url = navigationResponse.response.url,
-            url.path == "/blank.html",
+    func webView(_: WKWebView,
+                 decidePolicyFor navigationResponse: WKNavigationResponse,
+                 decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        guard let url = navigationResponse.response.url, url.path == "/blank.html",
             let fragment = url.fragment
         else {
             decisionHandler(.allow)
@@ -62,18 +57,26 @@ extension LoginViewController: WKNavigationDelegate {
                 return dict
             }
 
-        print("token: " + params["access_token"]!)
-        print("id: " + params["user_id"]!)
+        guard let token = params["access_token"], let userId = params["user_id"] else {
+            let alert = UIAlertController(title: "Error",
+                                          message: "Authorization error",
+                                          preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
 
-        Session.instance.token = params["access_token"]!
-        Session.instance.userId = params["user_id"]!
+            return
+        }
+
+        Session.instance.token = token
+        Session.instance.userId = userId
 
         // Save to UserDefaults
-        UserDefaults.standard.setValue(params["access_token"]!, forKey: "Token")
-        UserDefaults.standard.setValue(params["user_id"]!, forKey: "Id")
+        UserDefaults.standard.setValue(token, forKey: "Token")
+        UserDefaults.standard.setValue(userId, forKey: "UserId")
 
         decisionHandler(.cancel)
 
-        performSegue(withIdentifier: "Login Segue", sender: nil)
+        performSegue(withIdentifier: "LoginSegue", sender: nil)
     }
 }

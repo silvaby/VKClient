@@ -8,7 +8,6 @@
 import Alamofire
 import SDWebImage
 import UIKit
-import WebKit
 
 class SettingsViewController: UIViewController {
     // MARK: - Properties
@@ -40,8 +39,6 @@ class SettingsViewController: UIViewController {
                                            options: .scaleDownLargeImages,
                                            completed: nil)
                 }
-
-                print(data)
             case let .failure(error):
                 print(error)
             }
@@ -50,32 +47,5 @@ class SettingsViewController: UIViewController {
 
     // MARK: - TODO
 
-    @IBAction func logout(_: Any) {
-        // VKSdk.forceLogout()
-        Session.instance.token = ""
-        Session.instance.userId = ""
-
-//        let logoutUrl = "https://api.vk.com/oauth/logout"
-//
-//        let request = NSMutableURLRequest(url: NSURL(string: logoutUrl)! as URL,
-//                                          cachePolicy: .reloadIgnoringLocalCacheData,
-//                                          timeoutInterval: 60.0)
-//        let responseData = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil)
-
-//        let storage = HTTPCookieStorage.shared
-//        for cookie in storage.cookies! {
-//            let domainName = cookie.domain
-//            let domainRange = domainName.range(of: "vk.com")
-//
-//            storage.deleteCookie(cookie)
-//        }
-
-//        let dataStore = WKWebsiteDataStore.default()
-//        dataStore.fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
-//          dataStore.removeData(
-//            ofTypes: WKWebsiteDataStore.allWebsiteDataTypes(),
-//            for: records.filter { $0.displayName.contains("vk") }, completionHandler: () -> Void
-//          )
-//        }
-    }
+    @IBAction func logout(_: Any) {}
 }

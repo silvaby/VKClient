@@ -5,8 +5,6 @@
 //  Created by Dzmitry on 10/29/20.
 //
 
-//   let users = try? newJSONDecoder().decode(Users.self, from: jsonData)
-
 import Foundation
 
 // MARK: - Users
