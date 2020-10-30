@@ -27,6 +27,8 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
         tableView.refreshControl = myRefreshControl
         myRefreshControl.beginRefreshing()
         downloadData()
