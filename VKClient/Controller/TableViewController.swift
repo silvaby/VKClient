@@ -59,6 +59,7 @@ class TableViewController: UIViewController {
                         }
                     }
                 }
+                self.itemsWithNames.sort { $0.date > $1.date }
             case let .failure(error):
                 print(error)
             }

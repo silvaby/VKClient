@@ -20,7 +20,6 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         downloadData()
     }
 
@@ -30,7 +29,11 @@ class SettingsViewController: UIViewController {
             switch result {
             case let .success(data):
                 self.users = data
-                self.firstName.text = self.users.first?.response.first?.firstName ?? "No name"
+
+                if let firstName = self.users.first?.response.first?.firstName,
+                    let lastName = self.users.first?.response.first?.lastName {
+                    self.firstName.text = firstName + " " + lastName
+                }
 
                 if let imageURL = self.users.first?.response.first?.photoMax {
                     let url = URL(string: imageURL)
@@ -45,7 +48,9 @@ class SettingsViewController: UIViewController {
         }
     }
 
-    // MARK: - TODO
+    // MARK: - Logout button
 
-    @IBAction func logout(_: Any) {}
+    @IBAction func logout(_: Any) {
+        WebCacheCleaner.clean()
+    }
 }

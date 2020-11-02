@@ -78,19 +78,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TN-5O-mxi">
-                                <rect key="frame" x="183" y="435.5" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logout:" destination="6G9-F2-DZo" eventType="touchUpInside" id="0gO-Ch-dkU"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VKLogo" translatesAutoresizingMaskIntoConstraints="NO" id="by6-Tq-Ush">
                                 <rect key="frame" x="107" y="108" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="UKN-Jl-D5F"/>
                                     <constraint firstAttribute="height" constant="200" id="g2C-7P-K8n"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-nj-X49">
                                 <rect key="frame" x="107" y="328" width="200" height="24"/>
@@ -102,15 +100,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TN-5O-mxi">
+                                <rect key="frame" x="147" y="372" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.29371812940000003" green="0.45950043200000001" blue="0.65885239839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ymg-G7-NvJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ibR-S0-6S5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Logout"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logout:" destination="6G9-F2-DZo" eventType="touchUpInside" id="0gO-Ch-dkU"/>
+                                    <segue destination="Wd4-M5-zFS" kind="presentation" modalPresentationStyle="fullScreen" id="lOJ-mc-1ri"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nKi-Op-zzN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0TN-5O-mxi" firstAttribute="top" secondItem="q7E-nj-X49" secondAttribute="bottom" constant="20" id="2MO-Vq-oZA"/>
                             <constraint firstItem="by6-Tq-Ush" firstAttribute="centerX" secondItem="nKi-Op-zzN" secondAttribute="centerX" id="KGH-Ef-goc"/>
                             <constraint firstItem="q7E-nj-X49" firstAttribute="top" secondItem="by6-Tq-Ush" secondAttribute="bottom" constant="20" id="Kfi-PW-jKp"/>
-                            <constraint firstItem="0TN-5O-mxi" firstAttribute="centerY" secondItem="nKi-Op-zzN" secondAttribute="centerY" id="VzA-hV-zzm"/>
+                            <constraint firstItem="0TN-5O-mxi" firstAttribute="centerX" secondItem="nKi-Op-zzN" secondAttribute="centerX" id="cOK-L5-szz"/>
                             <constraint firstItem="q7E-nj-X49" firstAttribute="centerX" secondItem="by6-Tq-Ush" secondAttribute="centerX" id="caB-42-ChG"/>
-                            <constraint firstItem="0TN-5O-mxi" firstAttribute="centerX" secondItem="nKi-Op-zzN" secondAttribute="centerX" id="hPG-Rg-69p"/>
                             <constraint firstItem="by6-Tq-Ush" firstAttribute="top" secondItem="nKi-Op-zzN" secondAttribute="top" constant="20" id="jYC-V5-Ugp"/>
                         </constraints>
                     </view>
@@ -150,6 +168,7 @@
                             <constraint firstItem="BLd-sA-EcA" firstAttribute="centerX" secondItem="ANe-sX-4z8" secondAttribute="centerX" id="xmK-KH-tKM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="boN-Ub-6qE"/>
                     <connections>
                         <outlet property="webView" destination="BLd-sA-EcA" id="gNA-av-rV7"/>
                         <segue destination="3pf-YS-Nvw" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="ayx-6E-tam"/>
