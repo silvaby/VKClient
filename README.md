@@ -14,4 +14,4 @@
 
 ## Requirements
 
-- iOS 12.0 or later.
+- iOS 11.0 or later.
