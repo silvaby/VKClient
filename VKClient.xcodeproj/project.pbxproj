@@ -22,6 +22,8 @@
 		4231F8BA254B3B3900E1A7DC /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231F8B9254B3B3900E1A7DC /* Users.swift */; };
 		4231F8E5254B828000E1A7DC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4231F8E4254B828000E1A7DC /* WebKit.framework */; };
 		4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E48C25509B12001793C0 /* WebCacheCleaner.swift */; };
+		4288E4942550A6C5001793C0 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4932550A6C5001793C0 /* Group.swift */; };
+		4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4962550A6F7001793C0 /* GroupsViewController.swift */; };
 		846CD403D2CC23BDB3E0B28D /* Pods_VKClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164FB4342019CE19C2971F8B /* Pods_VKClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		4231F8B9254B3B3900E1A7DC /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		4231F8E4254B828000E1A7DC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4288E48C25509B12001793C0 /* WebCacheCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCacheCleaner.swift; sourceTree = "<group>"; };
+		4288E4932550A6C5001793C0 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		4288E4962550A6F7001793C0 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		42E22771254C5A5700278A29 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799EB0E95F3345A8C876B8ED /* Pods-VKClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.release.xcconfig"; path = "Target Support Files/Pods-VKClient/Pods-VKClient.release.xcconfig"; sourceTree = "<group>"; };
 		A461FCEA77E63578EB8BABA5 /* Pods-VKClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.debug.xcconfig"; path = "Target Support Files/Pods-VKClient/Pods-VKClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		422C74762549BC680068C2A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4288E4932550A6C5001793C0 /* Group.swift */,
 				4231F8AA254AF8DA00E1A7DC /* Service.swift */,
 				4231F89E254A147E00E1A7DC /* Session.swift */,
 				4231F8B9254B3B3900E1A7DC /* Users.swift */,
@@ -130,6 +135,7 @@
 				4231F89B254A141B00E1A7DC /* LoginViewController.swift */,
 				422C745F2549B9600068C2A2 /* TableViewController.swift */,
 				422C748B2549D69C0068C2A2 /* SettingsViewController.swift */,
+				4288E4962550A6F7001793C0 /* GroupsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -300,12 +306,14 @@
 				4231F89C254A141B00E1A7DC /* LoginViewController.swift in Sources */,
 				4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */,
 				422C74602549B9600068C2A2 /* TableViewController.swift in Sources */,
+				4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */,
 				422C745C2549B9600068C2A2 /* AppDelegate.swift in Sources */,
 				422C74882549D5260068C2A2 /* CustomTableViewCell.swift in Sources */,
 				4231F8B2254B3A0D00E1A7DC /* Wall.swift in Sources */,
 				422C748C2549D69C0068C2A2 /* SettingsViewController.swift in Sources */,
 				422C745E2549B9600068C2A2 /* SceneDelegate.swift in Sources */,
 				4231F8BA254B3B3900E1A7DC /* Users.swift in Sources */,
+				4288E4942550A6C5001793C0 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
