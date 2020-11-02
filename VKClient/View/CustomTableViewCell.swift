@@ -13,15 +13,11 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var fullName: UILabel!
     @IBOutlet var wallText: UILabel!
 
-    func configure(_ item: Item) {
-        if let wallText = item.text {
-            self.wallText.text = wallText
-        } else { wallText.text = "No name" }
-    }
-
-    func configure(_ profile: Profile) {
-        if let name = profile.firstName {
-            fullName.text = name
+    func configure(_ itemsWithNames: ItemsWithName) {
+        if let firstName = itemsWithNames.firstName,
+            let lastName = itemsWithNames.lastName {
+            fullName.text = firstName + " " + lastName
         } else { fullName.text = "No name" }
+        wallText.text = itemsWithNames.text
     }
 }

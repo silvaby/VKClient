@@ -52,3 +52,11 @@ struct Profile: Codable {
         case lastName = "last_name"
     }
 }
+
+// MARK: - ItemsWithName
+
+struct ItemsWithName {
+    let firstName, lastName: String?
+    let id, fromID, ownerID, date: Int
+    let text: String?
+}

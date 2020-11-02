@@ -13,6 +13,7 @@ class TableViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
 
+    private var itemsWithNames = [ItemsWithName]()
     private let idCell = "Cell"
     private let service = Service()
     private var wall: ResponseWall = ResponseWall.empty()
@@ -44,6 +45,20 @@ class TableViewController: UIViewController {
             switch result {
             case let .success(data):
                 self.wall = data
+                self.itemsWithNames = [ItemsWithName]()
+                for item in self.wall.response.items {
+                    for profiles in self.wall.response.profiles {
+                        if item.fromID == profiles.id {
+                            self.itemsWithNames.append(ItemsWithName(firstName: profiles.firstName,
+                                                                     lastName: profiles.lastName,
+                                                                     id: item.id,
+                                                                     fromID: item.fromID,
+                                                                     ownerID: item.ownerID,
+                                                                     date: item.date,
+                                                                     text: item.text))
+                        }
+                    }
+                }
             case let .failure(error):
                 print(error)
             }
@@ -65,9 +80,8 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell,
                                                  for: indexPath) as? CustomTableViewCell
-
         // Configure the cell
-        cell?.configure(wall.response.items[indexPath.row])
+        cell?.configure(itemsWithNames[indexPath.row])
         return cell!
     }
 }
