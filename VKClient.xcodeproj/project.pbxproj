@@ -24,6 +24,7 @@
 		4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E48C25509B12001793C0 /* WebCacheCleaner.swift */; };
 		4288E4942550A6C5001793C0 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4932550A6C5001793C0 /* Group.swift */; };
 		4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4962550A6F7001793C0 /* GroupsViewController.swift */; };
+		4288E4A225518D16001793C0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4A125518D16001793C0 /* Reachability.swift */; };
 		846CD403D2CC23BDB3E0B28D /* Pods_VKClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164FB4342019CE19C2971F8B /* Pods_VKClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		4288E48C25509B12001793C0 /* WebCacheCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCacheCleaner.swift; sourceTree = "<group>"; };
 		4288E4932550A6C5001793C0 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		4288E4962550A6F7001793C0 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		4288E4A125518D16001793C0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		42E22771254C5A5700278A29 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799EB0E95F3345A8C876B8ED /* Pods-VKClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.release.xcconfig"; path = "Target Support Files/Pods-VKClient/Pods-VKClient.release.xcconfig"; sourceTree = "<group>"; };
 		A461FCEA77E63578EB8BABA5 /* Pods-VKClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.debug.xcconfig"; path = "Target Support Files/Pods-VKClient/Pods-VKClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				4288E4932550A6C5001793C0 /* Group.swift */,
+				4288E4A125518D16001793C0 /* Reachability.swift */,
 				4231F8AA254AF8DA00E1A7DC /* Service.swift */,
 				4231F89E254A147E00E1A7DC /* Session.swift */,
 				4231F8B9254B3B3900E1A7DC /* Users.swift */,
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4288E4A225518D16001793C0 /* Reachability.swift in Sources */,
 				4231F89F254A147E00E1A7DC /* Session.swift in Sources */,
 				4231F8AB254AF8DA00E1A7DC /* Service.swift in Sources */,
 				4231F89C254A141B00E1A7DC /* LoginViewController.swift in Sources */,

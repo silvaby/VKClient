@@ -33,6 +33,23 @@ class LoginViewController: UIViewController {
         let request = URLRequest(url: urlComponents.url!)
         webView.load(request)
     }
+
+    // Alert "No Internet"
+    override func viewDidAppear(_: Bool) {
+        if Reachability.isConnectedToNetwork() {
+            print("Internet Connection Available!")
+        } else {
+            print("Internet Connection not Available!")
+            let controller = UIAlertController(title: "No Internet Detected",
+                                               message: "This app requires an Internet connection",
+                                               preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            controller.addAction(ok)
+            controller.addAction(cancel)
+            present(controller, animated: true, completion: nil)
+        }
+    }
 }
 
 extension LoginViewController: WKNavigationDelegate {
