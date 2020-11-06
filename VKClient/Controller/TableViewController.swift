@@ -13,10 +13,8 @@ class TableViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
 
-    private var itemsWithNames = [ItemsWithName]()
     private let idCell = "Cell"
     private let service = Service()
-    private var wall: ResponseWall = ResponseWall.empty()
     private let myRefreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         let title = NSLocalizedString("Wait a second, please", comment: "Pull to refresh")
@@ -39,27 +37,12 @@ class TableViewController: UIViewController {
         downloadData()
     }
 
-    /// Download ahd parse data.
+    /// Download and parse data.
     private func downloadData() {
         service.getWall { result in
             switch result {
             case let .success(data):
-                self.wall = data
-                self.itemsWithNames = [ItemsWithName]()
-                for item in self.wall.response.items {
-                    for profiles in self.wall.response.profiles {
-                        if item.fromID == profiles.id {
-                            self.itemsWithNames.append(ItemsWithName(firstName: profiles.firstName,
-                                                                     lastName: profiles.lastName,
-                                                                     id: item.id,
-                                                                     fromID: item.fromID,
-                                                                     ownerID: item.ownerID,
-                                                                     date: item.date,
-                                                                     text: item.text))
-                        }
-                    }
-                }
-                self.itemsWithNames.sort { $0.date > $1.date }
+                self.service.parseWall(jsonData: data)
             case let .failure(error):
                 print(error)
             }
@@ -75,14 +58,14 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return wall.response.count
+        return service.itemsWithNames.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell,
                                                  for: indexPath) as? CustomTableViewCell
         // Configure the cell
-        cell?.configure(itemsWithNames[indexPath.row])
+        cell?.configure(service.itemsWithNames[indexPath.row])
         return cell!
     }
 }

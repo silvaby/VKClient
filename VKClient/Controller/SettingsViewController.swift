@@ -16,32 +16,30 @@ class SettingsViewController: UIViewController {
     @IBOutlet var firstName: UILabel!
 
     private let service = Service()
-    private var users = [Users]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadData()
     }
 
-    /// Download ahd parse data.
+    /// Download and parse data.
     private func downloadData() {
         service.getUser { result in
             switch result {
             case let .success(data):
-                self.users = data
-
-                if let firstName = self.users.first?.response.first?.firstName,
-                    let lastName = self.users.first?.response.first?.lastName {
+                self.service.parseUsers(jsonData: data)
+                if let firstName = self.service.users.response.first?.firstName,
+                    let lastName = self.service.users.response.first?.lastName {
                     self.firstName.text = firstName + " " + lastName
                 }
-
-                if let imageURL = self.users.first?.response.first?.photoMax {
+                if let imageURL = self.service.users.response.first?.photoMax {
                     let url = URL(string: imageURL)
                     self.photo.sd_setImage(with: url,
                                            placeholderImage: #imageLiteral(resourceName: "VKLogo"),
                                            options: .scaleDownLargeImages,
                                            completed: nil)
                 }
+
             case let .failure(error):
                 print(error)
             }
@@ -51,6 +49,6 @@ class SettingsViewController: UIViewController {
     // MARK: - Logout button
 
     @IBAction func logout(_: Any) {
-        WebCacheCleaner.clean()
+        Authentication.signOut { _ in }
     }
 }
