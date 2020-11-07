@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsCell" textLabel="ttO-mK-VRS" detailTextLabel="XIg-rQ-joe" style="IBUITableViewCellStyleSubtitle" id="Bz8-12-x9T" customClass="CustomTableViewCell" customModule="VKClient" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsCell" textLabel="ttO-mK-VRS" detailTextLabel="XIg-rQ-joe" style="IBUITableViewCellStyleSubtitle" id="Bz8-12-x9T" customClass="PostsTableViewCell" customModule="VKClient" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bz8-12-x9T" id="K8X-r8-4xd">
