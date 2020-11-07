@@ -39,16 +39,21 @@ class LoginViewController: UIViewController {
 
     private func load() {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "oauth.vk.com"
-        urlComponents.path = "/authorize"
+        urlComponents.scheme = Keys.requestScheme
+        urlComponents.host = Keys.requestHost
+        urlComponents.path = Keys.requestPath
         urlComponents.queryItems = [
-            URLQueryItem(name: "client_id", value: "7643520"),
-            URLQueryItem(name: "display", value: "mobile"),
-            URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
-            URLQueryItem(name: "scope", value: "270342"),
-            URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: "5.124"),
+            URLQueryItem(name: Keys.requestClientIdKey,
+                         value: Keys.requestClientIdValue),
+            URLQueryItem(name: Keys.requestDisplayKey,
+                         value: Keys.requestDisplayValue),
+            URLQueryItem(name: Keys.requestRedirectUriKey,
+                         value: Keys.requestRedirectUriValue),
+            URLQueryItem(name: Keys.requestScopeKey,
+                         value: Keys.requestScopeValue),
+            URLQueryItem(name: Keys.requestResponseTypeKey,
+                         value: Keys.requestResponseTypeValue),
+            URLQueryItem(name: Keys.versionKey, value: Keys.versionValue),
         ]
         let request = URLRequest(url: urlComponents.url!)
         webView.load(request)
@@ -59,7 +64,7 @@ extension LoginViewController: WKNavigationDelegate {
     func webView(_: WKWebView,
                  decidePolicyFor navigationResponse: WKNavigationResponse,
                  decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-        guard let url = navigationResponse.response.url, url.path == "/blank.html",
+        guard let url = navigationResponse.response.url, url.path == Keys.responsePath,
             let fragment = url.fragment
         else {
             decisionHandler(.allow)
@@ -77,7 +82,8 @@ extension LoginViewController: WKNavigationDelegate {
                 return dict
             }
 
-        guard let token = params["access_token"], let userId = params["user_id"] else {
+        guard let token = params[Keys.accessTokenKey],
+            let userId = params[Keys.userIdKey] else {
             let alert = UIAlertController(title: "Error",
                                           message: "Authorization error",
                                           preferredStyle: .alert)
@@ -92,11 +98,11 @@ extension LoginViewController: WKNavigationDelegate {
         Session.instance.userId = userId
 
         // Save to UserDefaults
-        UserDefaults.standard.setValue(token, forKey: "Token")
-        UserDefaults.standard.setValue(userId, forKey: "UserId")
+        UserDefaults.standard.setValue(token, forKey: Keys.userDefaultsAccessTokenKey)
+        UserDefaults.standard.setValue(userId, forKey: Keys.userDefaultsUserIdKey)
 
         decisionHandler(.cancel)
 
-        performSegue(withIdentifier: "LoginSegue", sender: nil)
+        performSegue(withIdentifier: Keys.loginSegueID, sender: nil)
     }
 }

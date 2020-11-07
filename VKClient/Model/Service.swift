@@ -11,9 +11,9 @@ import Foundation
 class Service {
     // MARK: - Properties
 
-    /// Array of `Users`
+    /// A property that stores detailed information about users.
     var users: Users = Users(response: [Response]())
-    /// New sorted array with items and profiles
+    /// New sorted array with items and profiles.
     var itemsWithNames = [ItemsWithName]()
 
     // MARK: - users.get
@@ -46,6 +46,7 @@ class Service {
 
     // MARK: - wall.get
 
+    /// Returns a list of posts on a user wall or community wall.
     func getWall(completion: @escaping (Result<Data, Error>) -> Void) {
         let url = Keys.baseUrl + Keys.pathWallGet
         let parameters = [

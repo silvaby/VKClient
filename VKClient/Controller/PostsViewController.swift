@@ -8,18 +8,20 @@
 import Alamofire
 import UIKit
 
-class TableViewController: UIViewController {
+class PostsViewController: UIViewController {
     // MARK: - Properties
 
     @IBOutlet var tableView: UITableView!
 
-    private let idCell = "Cell"
     private let service = Service()
     private let myRefreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        let title = NSLocalizedString("Wait a second, please", comment: "Pull to refresh")
+        let title = NSLocalizedString("Wait a second, please",
+                                      comment: "Pull to refresh")
         refreshControl.attributedTitle = NSAttributedString(string: title)
-        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        refreshControl.addTarget(self,
+                                 action: #selector(refresh(sender:)),
+                                 for: .valueChanged)
         return refreshControl
     }()
 
@@ -56,13 +58,13 @@ class TableViewController: UIViewController {
 
 // MARK: - Create and configure table
 
-extension TableViewController: UITableViewDataSource, UITableViewDelegate {
+extension PostsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return service.itemsWithNames.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idCell,
+        let cell = tableView.dequeueReusableCell(withIdentifier: Keys.postsCellID,
                                                  for: indexPath) as? CustomTableViewCell
         // Configure the cell
         cell?.configure(service.itemsWithNames[indexPath.row])

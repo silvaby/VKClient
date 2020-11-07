@@ -11,7 +11,7 @@
 		420714932555FD7300A6632C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420714922555FD7300A6632C /* Keys.swift */; };
 		422C745C2549B9600068C2A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745B2549B9600068C2A2 /* AppDelegate.swift */; };
 		422C745E2549B9600068C2A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745D2549B9600068C2A2 /* SceneDelegate.swift */; };
-		422C74602549B9600068C2A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745F2549B9600068C2A2 /* TableViewController.swift */; };
+		422C74602549B9600068C2A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745F2549B9600068C2A2 /* PostsViewController.swift */; };
 		422C74632549B9600068C2A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422C74612549B9600068C2A2 /* Main.storyboard */; };
 		422C74652549B9620068C2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422C74642549B9620068C2A2 /* Assets.xcassets */; };
 		422C74682549B9620068C2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422C74662549B9620068C2A2 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 		422C74582549B9600068C2A2 /* VKClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422C745B2549B9600068C2A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422C745D2549B9600068C2A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		422C745F2549B9600068C2A2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		422C745F2549B9600068C2A2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		422C74622549B9600068C2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		422C74642549B9620068C2A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		422C74672549B9620068C2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				422C74872549D5260068C2A2 /* CustomTableViewCell.swift */,
-				422C74612549B9600068C2A2 /* Main.storyboard */,
 				422C74662549B9620068C2A2 /* LaunchScreen.storyboard */,
+				422C74612549B9600068C2A2 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,10 +141,10 @@
 		422C74782549BC760068C2A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4231F89B254A141B00E1A7DC /* LoginViewController.swift */,
-				422C745F2549B9600068C2A2 /* TableViewController.swift */,
-				422C748B2549D69C0068C2A2 /* SettingsViewController.swift */,
 				4288E4962550A6F7001793C0 /* GroupsViewController.swift */,
+				4231F89B254A141B00E1A7DC /* LoginViewController.swift */,
+				422C745F2549B9600068C2A2 /* PostsViewController.swift */,
+				422C748B2549D69C0068C2A2 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 				4231F8AB254AF8DA00E1A7DC /* Service.swift in Sources */,
 				4231F89C254A141B00E1A7DC /* LoginViewController.swift in Sources */,
 				4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */,
-				422C74602549B9600068C2A2 /* TableViewController.swift in Sources */,
+				422C74602549B9600068C2A2 /* PostsViewController.swift in Sources */,
 				4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */,
 				422C745C2549B9600068C2A2 /* AppDelegate.swift in Sources */,
 				420714842551E4BE00A6632C /* Authentication.swift in Sources */,
