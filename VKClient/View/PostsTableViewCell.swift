@@ -7,12 +7,13 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class PostsTableViewCell: UITableViewCell {
     // MARK: - Properties
 
     @IBOutlet var fullName: UILabel!
     @IBOutlet var wallText: UILabel!
 
+    /// Configures a cell.
     func configure(_ itemsWithNames: ItemsWithName) {
         if let firstName = itemsWithNames.firstName,
             let lastName = itemsWithNames.lastName {

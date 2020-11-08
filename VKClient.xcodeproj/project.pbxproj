@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420714842551E4BE00A6632C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420714832551E4BE00A6632C /* Authentication.swift */; };
+		420714932555FD7300A6632C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420714922555FD7300A6632C /* Keys.swift */; };
+		420714AA2556B91100A6632C /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420714A92556B91100A6632C /* GroupsTableViewCell.swift */; };
 		422C745C2549B9600068C2A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745B2549B9600068C2A2 /* AppDelegate.swift */; };
 		422C745E2549B9600068C2A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745D2549B9600068C2A2 /* SceneDelegate.swift */; };
-		422C74602549B9600068C2A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745F2549B9600068C2A2 /* TableViewController.swift */; };
+		422C74602549B9600068C2A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C745F2549B9600068C2A2 /* PostsViewController.swift */; };
 		422C74632549B9600068C2A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422C74612549B9600068C2A2 /* Main.storyboard */; };
 		422C74652549B9620068C2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422C74642549B9620068C2A2 /* Assets.xcassets */; };
 		422C74682549B9620068C2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422C74662549B9620068C2A2 /* LaunchScreen.storyboard */; };
-		422C74882549D5260068C2A2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C74872549D5260068C2A2 /* CustomTableViewCell.swift */; };
+		422C74882549D5260068C2A2 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C74872549D5260068C2A2 /* PostsTableViewCell.swift */; };
 		422C748C2549D69C0068C2A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C748B2549D69C0068C2A2 /* SettingsViewController.swift */; };
 		4231F89C254A141B00E1A7DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231F89B254A141B00E1A7DC /* LoginViewController.swift */; };
 		4231F89F254A147E00E1A7DC /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231F89E254A147E00E1A7DC /* Session.swift */; };
@@ -22,20 +25,26 @@
 		4231F8BA254B3B3900E1A7DC /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231F8B9254B3B3900E1A7DC /* Users.swift */; };
 		4231F8E5254B828000E1A7DC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4231F8E4254B828000E1A7DC /* WebKit.framework */; };
 		4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E48C25509B12001793C0 /* WebCacheCleaner.swift */; };
+		4288E4942550A6C5001793C0 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4932550A6C5001793C0 /* Group.swift */; };
+		4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4962550A6F7001793C0 /* GroupsViewController.swift */; };
+		4288E4A225518D16001793C0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4A125518D16001793C0 /* Reachability.swift */; };
 		846CD403D2CC23BDB3E0B28D /* Pods_VKClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164FB4342019CE19C2971F8B /* Pods_VKClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		164FB4342019CE19C2971F8B /* Pods_VKClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		420714832551E4BE00A6632C /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		420714922555FD7300A6632C /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		420714A92556B91100A6632C /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
 		422C74582549B9600068C2A2 /* VKClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422C745B2549B9600068C2A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422C745D2549B9600068C2A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		422C745F2549B9600068C2A2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		422C745F2549B9600068C2A2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		422C74622549B9600068C2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		422C74642549B9620068C2A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		422C74672549B9620068C2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		422C74692549B9620068C2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		422C74872549D5260068C2A2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		422C74872549D5260068C2A2 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		422C748B2549D69C0068C2A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4231F89B254A141B00E1A7DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4231F89E254A147E00E1A7DC /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -44,6 +53,9 @@
 		4231F8B9254B3B3900E1A7DC /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		4231F8E4254B828000E1A7DC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4288E48C25509B12001793C0 /* WebCacheCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCacheCleaner.swift; sourceTree = "<group>"; };
+		4288E4932550A6C5001793C0 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		4288E4962550A6F7001793C0 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		4288E4A125518D16001793C0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		42E22771254C5A5700278A29 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799EB0E95F3345A8C876B8ED /* Pods-VKClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.release.xcconfig"; path = "Target Support Files/Pods-VKClient/Pods-VKClient.release.xcconfig"; sourceTree = "<group>"; };
 		A461FCEA77E63578EB8BABA5 /* Pods-VKClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKClient.debug.xcconfig"; path = "Target Support Files/Pods-VKClient/Pods-VKClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		420714AC2556B91A00A6632C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				422C74662549B9620068C2A2 /* LaunchScreen.storyboard */,
+				422C74612549B9600068C2A2 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		422C744F2549B9600068C2A2 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +126,10 @@
 		422C74762549BC680068C2A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				420714832551E4BE00A6632C /* Authentication.swift */,
+				4288E4932550A6C5001793C0 /* Group.swift */,
+				420714922555FD7300A6632C /* Keys.swift */,
+				4288E4A125518D16001793C0 /* Reachability.swift */,
 				4231F8AA254AF8DA00E1A7DC /* Service.swift */,
 				4231F89E254A147E00E1A7DC /* Session.swift */,
 				4231F8B9254B3B3900E1A7DC /* Users.swift */,
@@ -117,9 +142,9 @@
 		422C74772549BC700068C2A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				422C74872549D5260068C2A2 /* CustomTableViewCell.swift */,
-				422C74612549B9600068C2A2 /* Main.storyboard */,
-				422C74662549B9620068C2A2 /* LaunchScreen.storyboard */,
+				420714A92556B91100A6632C /* GroupsTableViewCell.swift */,
+				422C74872549D5260068C2A2 /* PostsTableViewCell.swift */,
+				420714AC2556B91A00A6632C /* Storyboards */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,8 +152,9 @@
 		422C74782549BC760068C2A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4288E4962550A6F7001793C0 /* GroupsViewController.swift */,
 				4231F89B254A141B00E1A7DC /* LoginViewController.swift */,
-				422C745F2549B9600068C2A2 /* TableViewController.swift */,
+				422C745F2549B9600068C2A2 /* PostsViewController.swift */,
 				422C748B2549D69C0068C2A2 /* SettingsViewController.swift */,
 			);
 			path = Controller;
@@ -295,17 +321,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4288E4A225518D16001793C0 /* Reachability.swift in Sources */,
+				420714932555FD7300A6632C /* Keys.swift in Sources */,
 				4231F89F254A147E00E1A7DC /* Session.swift in Sources */,
 				4231F8AB254AF8DA00E1A7DC /* Service.swift in Sources */,
 				4231F89C254A141B00E1A7DC /* LoginViewController.swift in Sources */,
 				4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */,
-				422C74602549B9600068C2A2 /* TableViewController.swift in Sources */,
+				422C74602549B9600068C2A2 /* PostsViewController.swift in Sources */,
+				4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */,
 				422C745C2549B9600068C2A2 /* AppDelegate.swift in Sources */,
-				422C74882549D5260068C2A2 /* CustomTableViewCell.swift in Sources */,
+				420714842551E4BE00A6632C /* Authentication.swift in Sources */,
+				422C74882549D5260068C2A2 /* PostsTableViewCell.swift in Sources */,
 				4231F8B2254B3A0D00E1A7DC /* Wall.swift in Sources */,
 				422C748C2549D69C0068C2A2 /* SettingsViewController.swift in Sources */,
 				422C745E2549B9600068C2A2 /* SceneDelegate.swift in Sources */,
 				4231F8BA254B3B3900E1A7DC /* Users.swift in Sources */,
+				4288E4942550A6C5001793C0 /* Group.swift in Sources */,
+				420714AA2556B91100A6632C /* GroupsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
