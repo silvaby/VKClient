@@ -55,7 +55,6 @@ struct Authentication {
      */
     static func signOut(completion: (Bool) -> Void) {
         isSignedIn = false
-        WebCacheCleaner.clean()
         completion(true)
     }
 }

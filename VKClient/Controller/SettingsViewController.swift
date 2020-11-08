@@ -20,6 +20,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadData()
+
+        Authentication.signIn { _ in }
+        print("Now isSignedIn: ", Authentication.isSignedIn)
     }
 
     /// Download and parse data.
@@ -49,6 +52,8 @@ class SettingsViewController: UIViewController {
     // MARK: - Logout button
 
     @IBAction func logout(_: Any) {
+        WebCacheCleaner.clean()
         Authentication.signOut { _ in }
+        print("Now isSignedIn: ", Authentication.isSignedIn)
     }
 }

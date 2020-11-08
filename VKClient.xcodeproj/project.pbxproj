@@ -24,6 +24,7 @@
 		4231F8B2254B3A0D00E1A7DC /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231F8B1254B3A0D00E1A7DC /* Wall.swift */; };
 		4231F8BA254B3B3900E1A7DC /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231F8B9254B3B3900E1A7DC /* Users.swift */; };
 		4231F8E5254B828000E1A7DC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4231F8E4254B828000E1A7DC /* WebKit.framework */; };
+		424D4B66255899940092EA9F /* LoginViewController+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D4B65255899940092EA9F /* LoginViewController+WebView.swift */; };
 		4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E48C25509B12001793C0 /* WebCacheCleaner.swift */; };
 		4288E4942550A6C5001793C0 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4932550A6C5001793C0 /* Group.swift */; };
 		4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4288E4962550A6F7001793C0 /* GroupsViewController.swift */; };
@@ -52,6 +53,7 @@
 		4231F8B1254B3A0D00E1A7DC /* Wall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
 		4231F8B9254B3B3900E1A7DC /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		4231F8E4254B828000E1A7DC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		424D4B65255899940092EA9F /* LoginViewController+WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+WebView.swift"; sourceTree = "<group>"; };
 		4288E48C25509B12001793C0 /* WebCacheCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCacheCleaner.swift; sourceTree = "<group>"; };
 		4288E4932550A6C5001793C0 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		4288E4962550A6F7001793C0 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				422C74762549BC680068C2A2 /* Model */,
 				422C74772549BC700068C2A2 /* View */,
 				422C74782549BC760068C2A2 /* Controller */,
+				424D4B642558993E0092EA9F /* Extensions */,
 				422C74792549BCAD0068C2A2 /* Resources */,
 				422C74692549B9620068C2A2 /* Info.plist */,
 			);
@@ -166,6 +169,14 @@
 				422C74642549B9620068C2A2 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		424D4B642558993E0092EA9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				424D4B65255899940092EA9F /* LoginViewController+WebView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4C58E125F07C8F90739AA961 /* Pods */ = {
@@ -327,6 +338,7 @@
 				4231F8AB254AF8DA00E1A7DC /* Service.swift in Sources */,
 				4231F89C254A141B00E1A7DC /* LoginViewController.swift in Sources */,
 				4288E48D25509B12001793C0 /* WebCacheCleaner.swift in Sources */,
+				424D4B66255899940092EA9F /* LoginViewController+WebView.swift in Sources */,
 				422C74602549B9600068C2A2 /* PostsViewController.swift in Sources */,
 				4288E4972550A6F7001793C0 /* GroupsViewController.swift in Sources */,
 				422C745C2549B9600068C2A2 /* AppDelegate.swift in Sources */,

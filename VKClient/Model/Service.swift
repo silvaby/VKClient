@@ -7,6 +7,7 @@
 
 import Alamofire
 import Foundation
+import WebKit
 
 class Service {
     // MARK: - Properties
@@ -86,5 +87,32 @@ class Service {
         } catch {
             print("Error")
         }
+    }
+
+    // MARK: - Network
+
+    /// Load web content into `WKWebView`.
+    class func loadContent(in webView: WKWebView) {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = Keys.requestScheme
+        urlComponents.host = Keys.requestHost
+        urlComponents.path = Keys.requestPath
+        urlComponents.queryItems = [
+            URLQueryItem(name: Keys.requestClientIdKey,
+                         value: Keys.requestClientIdValue),
+            URLQueryItem(name: Keys.requestDisplayKey,
+                         value: Keys.requestDisplayValue),
+            URLQueryItem(name: Keys.requestRedirectUriKey,
+                         value: Keys.requestRedirectUriValue),
+            URLQueryItem(name: Keys.requestScopeKey,
+                         value: Keys.requestScopeValue),
+            URLQueryItem(name: Keys.requestResponseTypeKey,
+                         value: Keys.requestResponseTypeValue),
+            URLQueryItem(name: Keys.versionKey, value: Keys.versionValue),
+        ]
+        let request = URLRequest(url: urlComponents.url!)
+        webView.load(request)
+
+        print("Now isSignedIn: ", Authentication.isSignedIn)
     }
 }

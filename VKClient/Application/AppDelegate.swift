@@ -29,6 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = viewController
 //        window?.makeKeyAndVisible()
 
+        // Check
+//        if Authentication.isSignedIn {
+//            // Go to SettingsViewController
+//        } else {
+//            // Go to LoginViewController
+//        }
         return true
     }
 }
