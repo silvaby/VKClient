@@ -41,6 +41,9 @@ extension LoginViewController: WKNavigationDelegate {
             return
         }
 
+        print("token: " + token)
+//        print("id: " + userId)
+
         Session.instance.token = token
         Session.instance.userId = userId
 
